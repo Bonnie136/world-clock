@@ -4,35 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=location_on"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>World Clock</title>
   </head>
   <body>
-    <div>
+    <div class="container">
       <h1>World Clock</h1>
-      <h2>Track time across different cities around the globe</h2>
-      <select name="" id="">
-        <option value="">Select a city..</option>
-        <option value="">Tokyo</option>
-        <option value="">Seville</option>
-        <option value="">San Francisco</option>
-      </select>
-      <div>
-        <p>London 🇬🇧</p>
-        <div>May 15 2026</div>
-        <div>6:47 PM</div>
+      <h5>Track time across different cities around the globe</h2>
+      <div class="form-selectore">
+        <select class="city-selector" id="">
+          <option value="">Select a city..</option>
+          <option value="">Tokyo</option>
+          <option value="">Seville</option>
+          <option value="">San Francisco</option>
+        </select>
       </div>
-      <div>
-        <p>Ontario 🇨🇦</p>
-        <div>May 15 2026</div>
-        <div>6:47 PM</div>
+      <div class="clock-cubes">
+        <div>
+          <div class="city">
+            <span class="material-symbols-outlined"> location_on </span> London
+          </div>
+          <div class="time">6:47 PM</div>
+          <div class="date">May 15 2026</div>
+        </div>
+        <div>
+          <div class="city">
+            <span class="material-symbols-outlined"> location_on </span> Ontario
+          </div>
+          <div class="time">6:47 PM</div>
+          <div class="date">May 15 2026</div>
+        </div>
       </div>
-      <footer>
-        This project was coded by
-        <a href="https://github.com/Bonnie136" target="_blank">Bonnie Wells</a>,
-        open sourced <a href="#">on GitHub</a> and hosted
-        <a href="#">by Netlify</a>
-      </footer>
     </div>
+    <footer>
+      This project was coded by
+      <a href="https://github.com/Bonnie136" target="_blank">Bonnie Wells</a>,
+      open sourced <a href="#">on GitHub</a> and hosted
+      <a href="#">by Netlify</a>
+    </footer>
     <script src="src/index.js"></script>
   </body>
 </html>
