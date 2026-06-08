@@ -23,6 +23,15 @@ h1 {
   margin-bottom: 0px;
 }
 
+.title-link {
+  text-decoration: none;
+  color: black;
+}
+
+.title-link:hover {
+  color: #ffa090;
+}
+
 h5 {
   text-align: center;
   padding-bottom: 20px;
