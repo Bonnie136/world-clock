@@ -2,9 +2,13 @@ function updateTime() {
   let londonDateElement = document.querySelector("#london-date");
   if (londonDateElement) {
     let londonTimeElement = document.querySelector("#london-time");
+    let currentCityElement = document.querySelector("#current-location");
     let londonTime = moment.tz.guess();
     let currentTime = moment.tz(londonTime);
+    let currentCity = londonTime.replace("_", " ").split("/").pop();
 
+    currentCityElement.innerHTML = `<div class="city">
+            <span class="material-symbols-outlined"> location_on </span> ${currentCity} </div>`;
     londonDateElement.innerHTML = currentTime.format("Mo MMMM, YYYY");
     londonTimeElement.innerHTML = currentTime.format(
       "h:mm:ss [<small>]A[</small>]",
