@@ -2,10 +2,11 @@ function updateTime() {
   let londonDateElement = document.querySelector("#london-date");
   if (londonDateElement) {
     let londonTimeElement = document.querySelector("#london-time");
-    let londonTime = moment.tz("Europe/London");
+    let londonTime = moment.tz.guess();
+    let currentTime = moment.tz(londonTime);
 
-    londonDateElement.innerHTML = londonTime.format("Mo MMMM, YYYY");
-    londonTimeElement.innerHTML = londonTime.format(
+    londonDateElement.innerHTML = currentTime.format("Mo MMMM, YYYY");
+    londonTimeElement.innerHTML = currentTime.format(
       "h:mm:ss [<small>]A[</small>]",
     );
   }
@@ -27,11 +28,8 @@ setInterval(updateTime, 1000);
 
 function updateCity(event) {
   let selectedTimeZone = event.target.value;
-  if (selectedTimeZone === "current") {
-    selectedTimeZone = moment.tz.guess();
-  }
   let cityName = selectedTimeZone.replace("_", " ").split("/").pop();
-  let selectedTime = moment().tz(selectedTimeZone);
+  let selectedTime = moment.tz(selectedTimeZone);
   let citiesElement = document.querySelector("#cities");
   citiesElement.innerHTML = `
     <div>
